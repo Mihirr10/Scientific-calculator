@@ -19,16 +19,19 @@ function fe() {
 
 //function for memory clear
 
+let memory=document.getElementById("memory");
 function mc() {
     localStorage.removeItem("memory");
     document.getElementById("memoryClear").disabled = true;
     document.getElementById("memoryRecall").disabled = true;
+    memory.innerHTML=""
 
 }
 
 //function for memory recall
 function mr() {
     display.value = localStorage.getItem("memory");
+    memory.innerHTML="Memory: "+localStorage.getItem('memory');
 }
 
 //function for memory plus
@@ -37,6 +40,7 @@ function mPlus() {
     localStorage.setItem("memory", display.value);
     document.getElementById("memoryClear").disabled = false;
     document.getElementById("memoryRecall").disabled = false;
+    memory.innerHTML="Memory: "+localStorage.getItem('memory');
 }
 
 //function for memory minus
@@ -45,12 +49,14 @@ function mMinus() {
     localStorage.setItem("memory", display.value);
     document.getElementById("memoryClear").disabled = false;
     document.getElementById("memoryRecall").disabled = false;
+    memory.innerHTML="Memory: "+localStorage.getItem('memory');
 }
 //function for memory store
 function ms() {
     localStorage.setItem("memory", display.value);
     document.getElementById("memoryClear").disabled = false;
     document.getElementById("memoryRecall").disabled = false;
+    memory.innerHTML="Memory: "+localStorage.getItem('memory');
 }
 
 //function for trogonometry
