@@ -77,6 +77,7 @@ function trigonometry() {
 //function for sin value
 function sin() {
     display.value = Math.sin(display.value * Math.PI / 180).toFixed(2);
+    document.getElementById("trigo").value="Trigonometry";
 
 }
 
@@ -84,12 +85,14 @@ function sin() {
 
 function cos() {
     display.value = Math.cos(display.value * Math.PI / 180).toFixed(2);
+    document.getElementById("trigo").value="Trigonometry";
 }
 
 //function for tan value
 
 function tan() {
     display.value = Math.tan(display.value * Math.PI / 180).toFixed(2);
+    document.getElementById("trigo").value="Trigonometry";
 }
 
 
@@ -98,10 +101,8 @@ function tan() {
 function functions() {
     let b = document.getElementById("functions").value;
 
-    if (b == 'abs') {
-        abs();
-    }
-    else if (b == 'floor') {
+   
+     if (b == 'floor') {
         floor();
     } else if (b == 'ceil') {
         ceil();
@@ -111,11 +112,13 @@ function functions() {
 //function for floor value
 function floor() {
     display.value = Math.floor(display.value);
+    document.getElementById("functions").value="Functions";
 }
 
 //function for ceil value
 function ceil() {
     display.value = Math.ceil(display.value);
+    document.getElementById("functions").value="Functions";
 }
 
 
@@ -220,11 +223,11 @@ function factorial() {
 
 //function for log
 function log() {
-    display.value = Math.log10(display.value);
+    display.value = Math.log10(display.value).toFixed(11);
 }
 //finction for ln
 function ln() {
-    display.value = Math.log(display.value);
+    display.value = Math.log(display.value).toFixed(11);
 }
 
 //function for plusminus
